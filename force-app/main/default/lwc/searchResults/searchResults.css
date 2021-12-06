@@ -1,0 +1,11 @@
+:host {
+    padding: 0 50px;
+}
+
+.num-results {
+    display: block;
+}
+
+lightning-spinner {
+    position: static;
+}

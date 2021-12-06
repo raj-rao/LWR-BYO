@@ -1,0 +1,20 @@
+<template>
+    <template if:true={isguestuser}>
+        <lightning-button label="Login" title="Login" onclick={handleLoginClick} class="slds-m-left_x-small"></lightning-button>
+    </template>
+    <template if:false={isguestuser}>
+        <div class="user-profile">
+            <lightning-avatar variant="circle" src={smallphotourl} data-id="user-profile-menu" onclick={handleClick} alternative-text={name} class="slds-m-right_small"></lightning-avatar>
+            <div class="slds-popover slds-nubbin_top-right" role="menu">
+                <ul class="slds-popover__body">
+                    <li class="profile-menu-item">
+                        <a href="/lwr" onclick={handleClick} data-id="Home" title="Home">Home</a>
+                    </li>
+                    <li class="profile-menu-item">
+                        <a href="javascript:void(0);" onclick={handleClick} data-id="My Profile" title="My Profile">My Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+    </template>
+</template>

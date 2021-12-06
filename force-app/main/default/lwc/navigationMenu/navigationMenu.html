@@ -1,0 +1,38 @@
+<template>
+  <nav>
+    <div class="navbar">
+      <i class='bx bx-menu' onclick={showSideBar}></i>
+      <div class="logo"><a href="#">CodingLab</a></div>
+      <div class="nav-links">
+        <div class="sidebar-logo">
+          <span class="logo-name">CodingLab</span>
+          <i class='bx bx-x' onclick={hideSideBar}></i>
+        </div>
+        <ul class="links">
+          <li><a href="#" onclick={handleClick}><i class="bx bxs-home home"></i>HOME</a></li>
+          <template for:each={menuItems} for:item="item">
+            <template if:true={item.hasChildren}>
+              <li key={item.id}><c-navigation-menu-item onselectedsubmenu={handleSubMenuEvent} item={item}></c-navigation-menu-item>
+                <i key={item.id} data-id={item.indx} class={item.arrowClass} onclick={showSubMenu}></i>
+                <ul key={item.id} class={item.subMenuClass}>
+                  <template for:each={item.children} for:item="subItem">
+                    <li key={subItem.id}><c-navigation-menu-item onselectedsubmenu={handleSubMenuEvent} item={subItem}></c-navigation-menu-item></li>
+                  </template>
+                </ul>
+              </li>
+            </template>
+            <template if:false={item.hasChildren}>
+              <li key={item.id}><c-navigation-menu-item onselectedsubmenu={handleSubMenuEvent} item={item}></c-navigation-menu-item></li>
+            </template>
+          </template>
+        </ul>
+      </div>
+
+      <c-search-Bar onhideuserprofile={hideUserProfileSearchSubMenu}></c-search-Bar>
+      
+      <c-user-Profile onhidesearch={hideUserProfileSearchSubMenu}></c-user-Profile>
+
+
+    </div>
+  </nav>
+</template>

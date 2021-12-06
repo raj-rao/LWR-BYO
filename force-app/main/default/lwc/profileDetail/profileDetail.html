@@ -1,0 +1,116 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="cProfileHeaderCon cProfilephoto slds-col">
+            <span class="uiImage">
+                <img src={fullphotourl} class="circularPhoto">
+            </span>
+        </div>
+        <div class="profileDetailView">
+            <div>
+                <span class="slds-text-heading_large slds-text-color_weak" title={name}>{name}</span>
+            </div>
+            <div class="userDetailHeader slds-grid slds-p-vertical--medium">
+                <div class="detailsData slds-m-bottom--large">
+                    <div class="full forcePageBlock forceRecordLayout forceRecordView">
+                        <div class="test-id__section slds-section  slds-is-open full forcePageBlockSection forcePageBlockSectionView">
+                            <div class="slds-form slds-form_stacked " >
+                                <div class="slds-grid slds-gutters_small full cols-2 forcePageBlockSectionRow">
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Name</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <span class="uiOutputText">{name}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Title</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <span class="uiOutputText">{title}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-gutters_small full cols-2 forcePageBlockSectionRow">
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Company Name</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <span class="uiOutputText">{companyName}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Email</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <a href={email} class="emailuiFormattedEmail">{email}</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-gutters_small full cols-2 forcePageBlockSectionRow">
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Phone</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <span class="forceOutputPhone " dir="ltr">{phone}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">Address</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <div class="slds-truncate forceOutputAddressText">{country}</div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slds-grid slds-gutters_small full cols-1 forcePageBlockSectionRow">
+                                    <div class="slds-col slds-grid slds-has-flexi-truncate  full long-text noTopBottomBorders forcePageBlockItem forcePageBlockItemView">
+                                        <div class="slds-form-element slds-form-element_readonly slds-grow slds-hint-parent override--slds-form-element">
+                                            <div class="test-id__field-label-container slds-form-element__label">
+                                                <span class="test-id__field-label">About Me</span>
+                                            </div>
+                                            <div class="slds-form-element__control slds-grid itemBody">
+                                                <span class="test-id__field-value slds-form-element__static slds-grow  is-read-only">
+                                                    <span class="uiOutputTextArea">{aboutMe}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</template>

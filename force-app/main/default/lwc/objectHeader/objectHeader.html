@@ -1,0 +1,18 @@
+<template>
+    <template if:true={objectInfo}>
+            <div class="slds-media slds-no-space slds-grow slds-p-around_large">
+                <div class="slds-media__figure slds-align-middle">
+                    <span class="slds-icon_container">
+                        <div class="slds-icon slds-icon_large" style={iconStyle}>
+                            <img src={objectInfo.themeInfo.iconUrl}></img>
+                        </div>
+                    </span>
+                </div>
+                <div class="slds-media__body slds-align-middle">
+                    <slot>
+                        {label}
+                    </slot>
+                </div>
+            </div>
+        </template>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="customPageLayout">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Custom Page Layout Example</masterLabel>
+    <description>A custom page layout</description>
+    <targets>
+        <target>lightningCommunity__Page_Layout</target>  
+    </targets>
+</LightningComponentBundle>
