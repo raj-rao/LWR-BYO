@@ -19,20 +19,20 @@ global with sharing class NavigationMenuItemsController {
     public static List<NavigationMenuItem> getNavigationMenuItems(String menuName, String publishedState) {
         List<NavigationMenuItem> myList = new List<NavigationMenuItem>();
         List<NavigationMenuItem> navMenuList = new List<NavigationMenuItem>();
-        System.assert(menuName != null);
-        System.assert(publishedState != null);
         
+        if (String.isEmpty(menuName)) {
+            return new List<NavigationMenuItem>();
+        }
+
         String networkId = Network.getNetworkId();
-        System.assert(networkId != null);
 
         // find the link set belonging to the navigation menuName and active networkId
         List<NavigationLinkSet> linkSets = [
             SELECT Id 
             FROM NavigationLinkSet
-            WHERE MasterLabel = :menuName AND NetworkId = :networkId
+            WHERE DeveloperName = :menuName AND NetworkId = :networkId
         ];
 
-        System.assert(linkSets.size() == 1);
         Id linkSetId = linkSets.get(0).Id;
 
         // collect all the menu items belonging to the link set
@@ -50,19 +50,5 @@ global with sharing class NavigationMenuItemsController {
             ORDER BY ParentId, Position
         ];
         return myList;
-        /*
-        String tempParentId = '';
-        String tempId = ''; 
-        for (integer i=0; i<myList.size(); i++) {
-            if(myList[i].Type == 'MenuLabel' || myList[i].ParentId == null){ // this could be a menu label with sub level navigation;
-                navMenuList.add(myList[i]);
-                for (integer j=0; j<myList.size(); j++) {
-                    if(myList[j].ParentId == myList[i].Id){
-                        navMenuList.add(myList[j]);
-                    }
-                }
-            }
-        }
-    return navMenuList;*/
     }
 }
