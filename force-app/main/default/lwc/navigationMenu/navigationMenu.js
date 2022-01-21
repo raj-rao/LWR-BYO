@@ -102,7 +102,7 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
             this.menuItems = navMenuTree;
             for(let c =0;c<this.menuItems.length;c++){
                 if(this.menuItems[c].children.length){
-                    this.menuItems[c].parentIndx = this.menuItems[c].indx;//NEW LINE
+                    this.menuItems[c].parentIndx = this.menuItems[c].indx;
                     this.menuItems[c].hasChildren = true;
                     this.menuItems[c].subMenuClass = 'show'+this.menuItems[c].indx+'-sub-menu sub-menu';
                     this.menuItems[c].arrowClass = 'bx bxs-chevron-down arrow'+this.menuItems[c].indx + ' arrow ';
