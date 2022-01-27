@@ -9,7 +9,7 @@
           <i class='bx bx-x' onclick={hideSideBar}></i>
         </div>
         <ul class="links">
-          <li><a href="#" onclick={handleClick}><i class="bx bxs-home home"></i>HOME</a></li>
+          <li><a href="#" class="home-anchor" onclick={handleClick}><i class="bx bxs-home home"></i>HOME</a></li>
           <template for:each={menuItems} for:item="item">
             <template if:true={item.hasChildren}>
               <li key={item.id}><c-navigation-menu-item onselectedsubmenu={handleSubMenuEvent} item={item}></c-navigation-menu-item>

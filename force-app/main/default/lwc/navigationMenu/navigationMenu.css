@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
 }
+
+
 body{
   min-height: 100vh;
 }
@@ -11,7 +13,17 @@ body{
 .home{
   padding-right: 5px;
   font-size: var(--dxp-s-html-font-size);
+  /*font-family: var(--dxp-s-body-font-family);*/
+  /*color: var(--dxp-g-root-contrast);*/
 }
+
+.home-anchor{
+  font-size: var(--dxp-s-html-font-size);
+  text-decoration: none;
+  color: initial !important;
+}
+
+ 
 
 nav{
   position: fixed;
