@@ -216,6 +216,11 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
         // use the NavigationMixin from lightning/navigation to perform the navigation.
         event.stopPropagation();
         event.preventDefault();
+         //if sidebar is open ... hide sidebar when submenu item is clicked
+         this.navLinks = this.template.querySelector(".nav-links");
+         if(this.navLinks.style.left === "0px"){
+            this.hideSideBar();
+        }
         //redirect to Home page by pointing to basePath
         this.pageReference = {
             type: 'standard__webPage',
@@ -329,6 +334,7 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
      */
     handleSubMenuEvent(event){
         let hasChildren = event.detail.hasChildren;
+        console.log('HAS CHILDREN:'+hasChildren);
         if(hasChildren){
             let menuIndx = event.detail.menuIndx;
             let parentId = event.detail.parentId;
@@ -336,19 +342,18 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
             let arrowClass = '.arrow'+menuIndx;
             this.template.querySelector(arrowClass).classList.toggle('transformArrow');
             this.template.querySelector(subMenuClass).classList.toggle('showSubMenu');
-            //if sidebar is open ... hide sidebar when submenu item is clicked
-            this.navLinks = this.template.querySelector(".nav-links");
-            if(parentId && this.navLinks.style.left === "0px"){
-                this.hideSideBar();
-            }
             //set submenuParams
             this.submenuParams.push(menuIndx);
             //close any open submenus outside of the active submenu
             this.hideSubMenu(menuIndx);
-
         }else{
             // we know this menu item does not have children. Close any sub menus that are open
             this.hideSubMenu(null);
+            //if sidebar is open ... hide sidebar when submenu item is clicked
+            this.navLinks = this.template.querySelector(".nav-links");
+            if(this.navLinks.style.left === "0px"){
+                this.hideSideBar();
+            }
         }
 
         //close the user profile menu if open by firing the child component c-user-profile hideUserProfileMenu() method
