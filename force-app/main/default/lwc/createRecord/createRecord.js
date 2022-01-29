@@ -13,7 +13,7 @@ export default class CreateRecord extends LightningElement {
     caseObject = CASE_OBJECT;
     myFields = [ORIGIN_FIELD, DESCRIPTION_FIELD, STATUS_FIELD, SUBJECT_FIELD];
 
-    handleAccountCreated(){
-        // Run code when account is created.
+    handleCaseCreated(){
+        // Run code when case is created.
     }
 }
