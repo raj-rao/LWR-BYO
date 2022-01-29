@@ -53,7 +53,7 @@ export default class SldsCarouselCmsPanel extends LightningElement {
                 this.buttonLabel1 = data.buttonLabel1.value;
                 this.buttonVariant1 = data.buttonVariant1.value;
                 this.buttonNavigationType1 = data.buttonNavigationType1.value;
-                this.buttonUrl1 = data.buttonUrl1.value;
+                this.buttonUrl1 =  htmlDecode(data.buttonUrl1.value);
             } else {
                 this.includeButton1 = false;
             }
@@ -62,7 +62,7 @@ export default class SldsCarouselCmsPanel extends LightningElement {
                 this.buttonLabel2 = data.buttonLabel2.value;
                 this.buttonVariant2 = data.buttonVariant2.value;
                 this.buttonNavigationType2 = data.buttonNavigationType2.value;
-                this.buttonUrl2 = data.buttonUrl2.value;
+                this.buttonUrl2 =htmlDecode( data.buttonUrl2.value);
             } else {
                 this.includeButton2 = false;
             }

@@ -60,7 +60,7 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
      * is this a Guest User
      */
     isGuestUser = isGuest;
-
+    
     /**
      * the PageReference object used by lightning/navigation
      */

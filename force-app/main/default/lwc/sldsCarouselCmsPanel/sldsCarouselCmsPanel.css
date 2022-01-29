@@ -1,0 +1,4 @@
+h1{
+    font-size: var(--dxp-s-text-heading-extra-large-font-size);
+    font-family: var(--dxp-s-text-heading-extra-large-font-family);
+}

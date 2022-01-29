@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Create Record</masterLabel>
+    <description>Create New Case</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                name="objectApiName"
+                type="String"
+                default="Case"
+                label="Object Name"
+                description="The name of the Object"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

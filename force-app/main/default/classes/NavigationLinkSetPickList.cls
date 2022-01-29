@@ -9,7 +9,7 @@ global class NavigationLinkSetPickList extends VisualEditor.DynamicPickList {
 
     global override VisualEditor.DynamicPickListRows getValues() {
         VisualEditor.DynamicPickListRows picklistValues = new VisualEditor.DynamicPickListRows();
-        //String networkId = Network.getNetworkId();
+        //Get Network ID (Community Id)
         List<Network> network = [SELECT Id from Network WHERE Name = 'BYO LWR'];
         List<NavigationLinkSet> navigationLinkSetList = [
             SELECT MasterLabel, DeveloperName

@@ -1,5 +1,6 @@
 import { LightningElement, api } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
+import basePath from '@salesforce/community/basePath';
 
 export default class LightningNavigationButton extends NavigationMixin(
     LightningElement
@@ -36,7 +37,7 @@ export default class LightningNavigationButton extends NavigationMixin(
             this[NavigationMixin.Navigate]({
                 type: 'standard__webPage',
                 attributes: {
-                    url: window.location.host
+                    url: basePath + '/'+ this.url 
                 }
             });
         } else {
