@@ -41,7 +41,6 @@ export default class ProfileDetail extends LightningElement {
         if (error) {
            this.error = error ;
         } else if (data) {
-            console.log('PROFILE DETAIL DATA: '+JSON.stringify(data));
             this.name = data.fields.Name.value;
             this.fullphotourl = data.fields.FullPhotoUrl.value;
             this.smallphotourl = data.fields.SmallPhotoUrl.value;
