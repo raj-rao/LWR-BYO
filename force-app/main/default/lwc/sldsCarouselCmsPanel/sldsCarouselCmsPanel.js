@@ -45,52 +45,22 @@ export default class SldsCarouselCmsPanel extends LightningElement {
                 this.url =
                 basePath + '/sfsites/c' + data.bannerImage.unauthenticatedUrl;
             }
-            //this.url =
-            //    basePath + '/sfsites/c' + data.bannerImage.unauthenticatedUrl;
             this.altText = basePath + '/sfsites/c' + data.bannerImage.altText;
             if (data.buttonLabel1 && data.buttonLabel1.value) {
                 this.includeButton1 = true;
                 this.buttonLabel1 = data.buttonLabel1.value;
-                if(data.buttonVariant1.value){
-                    this.buttonVariant1 = data.buttonVariant1.value;
-                }else{
-                    this.buttonVariant1 = null;
-                }
-               
-                if(data.buttonNavigationType1.value){
-                    this.buttonNavigationType1 = data.buttonNavigationType1.value;
-                }else{
-                    this.buttonNavigationType1 = null;
-                }
-               
-                if(data.buttonUrl1.value){
-                    this.buttonUrl1 = htmlDecode(data.buttonUrl1.value);
-                }else{
-                    this.buttonUrl1 = null
-                }
+                this.buttonVariant1 = data.buttonVariant1.value;
+                this.buttonNavigationType1 = data.buttonNavigationType1.value;                    
+                this.buttonUrl1 = htmlDecode(data.buttonUrl1.value);
             } else {
                 this.includeButton1 = false;
             }
             if (data.buttonLabel2 && data.buttonLabel2.value) {
                 this.includeButton2 = true;
                 this.buttonLabel2 = data.buttonLabel2.value;
-                if(data.buttonVariant2.value){
-                    this.buttonVariant2 = data.buttonVariant2.value;
-                }else{
-                    this.buttonVariant2 = null;
-                }
-
-                if(data.buttonNavigationType2.value){
-                    this.buttonNavigationType2 = data.buttonNavigationType2.value;
-                }else{
-                    this.buttonNavigationType2 = null;
-                }
-
-                if(data.buttonUrl2.value){
-                    this.buttonUrl2 = htmlDecode(data.buttonUrl2.value);
-                }else{
-                    this.buttonUrl2 = null;
-                }
+                this.buttonVariant2 = data.buttonVariant2.value;
+                this.buttonNavigationType2 = data.buttonNavigationType2.value;
+                this.buttonUrl2 = htmlDecode(data.buttonUrl2.value);
             } else {
                 this.includeButton2 = false;
             }

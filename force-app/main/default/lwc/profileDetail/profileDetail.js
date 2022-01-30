@@ -8,7 +8,7 @@ const FIELDS = [
     'User.Name',
     'User.FullPhotoUrl',
     'User.SmallPhotoUrl',
-    'User.Manager.Name',
+    //'User.Manager.Name',
     'User.Title',
     'User.CompanyName',
     'User.AboutMe',
@@ -54,12 +54,14 @@ export default class ProfileDetail extends LightningElement {
                 this.smallphotourl = data.fields.SmallPhotoUrl.value;
             }
             
+            /*
             if(data.fields.Manager.value.fields.Name.value == null){
                 this.manager = '';
             }else{
                 this.manager = data.fields.Manager.value.fields.Name.value;
             }
-            
+            */
+           
             if(data.fields.Title.value == null){
                 this.title = '';
             }else{
