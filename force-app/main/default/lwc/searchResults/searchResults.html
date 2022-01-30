@@ -1,8 +1,8 @@
 <template>
     <!--h1 class="slds-text-heading_large slds-text-align_center">Search Results for: {searchString}</h1-->
 
-    <c-object-header object-api-name={objectApiName} plural="true"></c-object-header>
-    
+    <div class="dxp-text-heading-medium">Search Results for {objectApiName}s</div>
+        <!--c-object-header object-api-name={objectApiName} plural="true"></c-object-header-->
     <template if:true={isLoaded}>
         <template if:true={hasError}>
             <h2 class="slds-text-color_error slds-text-heading_large slds-text-align_center">{errorMessage}</h2>
@@ -14,13 +14,6 @@
                     record-id={result.Id}
                     label={result.Name}>
                 </c-record-link>
-                <!--c-record-link object-api-name={objectApiName}
-                    record-id={result.Id}
-                    label={result.Description}>
-                </c-record-link-->
-                <!--span class="slds-p-horizontal_small slds-text-color_weak">
-                    {result.Address.street}, {result.Address.city}, {result.Address.state} {result.Address.postalCode}  
-                </span-->
             </div>
         </template>
 

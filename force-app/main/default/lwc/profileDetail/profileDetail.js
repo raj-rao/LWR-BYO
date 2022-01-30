@@ -42,15 +42,54 @@ export default class ProfileDetail extends LightningElement {
            this.error = error ;
         } else if (data) {
             this.name = data.fields.Name.value;
-            this.fullphotourl = data.fields.FullPhotoUrl.value;
-            this.smallphotourl = data.fields.SmallPhotoUrl.value;
-            this.manager = data.fields.Manager.value.fields.Name.value;
-            this.title = data.fields.Title.value;
-            this.companyName = data.fields.CompanyName.value;
-            this.aboutMe = data.fields.AboutMe.value;
+            if(data.fields.FullPhotoUrl.value){
+                this.fullphotourl = data.fields.FullPhotoUrl.value;
+            }else{
+                this.fullphotourl = null;
+            }
+            
+            if(data.fields.SmallPhotoUrl.value){
+                this.smallphotourl = data.fields.SmallPhotoUrl.value;
+            }else{
+                this.smallphotourl = null;
+            }
+            
+            if(data.fields.Manager.value.fields.Name.value){
+                this.manager = data.fields.Manager.value.fields.Name.value;
+            }else{
+                this.manager = null;
+            }
+            
+            if(data.fields.Title.value){
+                this.title = data.fields.Title.value;
+            }else{
+                this.title = null;
+            }
+            
+            if(data.fields.CompanyName.value){
+                this.companyName = data.fields.CompanyName.value;
+            }else{
+                this.companyName = null;
+            }
+            
+            if(data.fields.AboutMe.value){
+                this.aboutMe = data.fields.AboutMe.value
+            }else{
+                this.aboutMe = null;
+            }
             this.email = data.fields.Email.value;
-            this.country = data.fields.Country.value;
-            this.phone = data.fields.Phone.value;
+            
+            if(data.fields.Country.value){
+                this.country = data.fields.Country.value;
+            }else{
+                this.country = null;
+            }
+            
+            if(data.fields.Phone.value){
+                this.phone = data.fields.Phone.value;
+            }else{
+                this.phone = null;
+            }
         }
     }
 }

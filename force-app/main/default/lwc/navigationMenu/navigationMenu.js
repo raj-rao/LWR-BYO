@@ -2,6 +2,7 @@ import { LightningElement, api, wire, track } from 'lwc';
 import { CurrentPageReference } from 'lightning/navigation';
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader'; //added by Raj Rao on 7/28/2021
 import boxIconStyles from '@salesforce/resourceUrl/boxIconsCSS';
+import azInsuranceLogo from '@salesforce/resourceUrl/azinsurancelogo';
 
 import { NavigationMixin } from 'lightning/navigation';
 import basePath from '@salesforce/community/basePath';
@@ -59,12 +60,18 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
     /**
      * is this a Guest User
      */
-    isGuestUser = isGuest;
+     isGuestUser = isGuest;
     
     /**
      * the PageReference object used by lightning/navigation
      */
      pageReference;
+
+     /**
+     * the site logo from resourceURL
+     */
+      logo = azInsuranceLogo;
+
 
     /**
      * Using a custom Apex controller, query for the NavigationMenuItems using the
