@@ -42,54 +42,54 @@ export default class ProfileDetail extends LightningElement {
            this.error = error ;
         } else if (data) {
             this.name = data.fields.Name.value;
-            //if(data.fields.FullPhotoUrl.value){
+            if(data.fields.FullPhotoUrl.value == null){
+                    this.fullphotourl = '';
+            }else{
                 this.fullphotourl = data.fields.FullPhotoUrl.value;
-            //}else{
-            //    this.fullphotourl = null;
-            //}
+           }
             
-            //if(data.fields.SmallPhotoUrl.value){
+            if(data.fields.SmallPhotoUrl.value == null){
+                this.smallphotourl = '';
+            }else{
                 this.smallphotourl = data.fields.SmallPhotoUrl.value;
-            //}else{
-            //    this.smallphotourl = null;
-            //}
+            }
             
-            //if(data.fields.Manager.value.fields.Name.value){
+            if(data.fields.Manager.value.fields.Name.value == null){
+                this.manager = '';
+            }else{
                 this.manager = data.fields.Manager.value.fields.Name.value;
-            //}else{
-            //    this.manager = null;
-            //}
+            }
             
-            //if(data.fields.Title.value){
+            if(data.fields.Title.value == null){
+                this.title = '';
+            }else{
                 this.title = data.fields.Title.value;
-            //}else{
-            //    this.title = null;
-            //}
+            }
             
-            //if(data.fields.CompanyName.value){
+            if(data.fields.CompanyName.value == null){
+                this.companyName = '';
+            }else{
                 this.companyName = data.fields.CompanyName.value;
-            //}else{
-            //    this.companyName = null;
-            //}
+            }
             
-            //if(data.fields.AboutMe.value){
+            if(data.fields.AboutMe.value == null){
+                this.aboutMe = '';
+            }else{
                 this.aboutMe = data.fields.AboutMe.value
-            //}else{
-            //    this.aboutMe = null;
-            //}
+            }
             this.email = data.fields.Email.value;
             
-            //if(data.fields.Country.value){
+            if(data.fields.Country.value == null){
+                this.country = '';
+            }else{
                 this.country = data.fields.Country.value;
-            //}else{
-            //    this.country = null;
-            //}
+            }
             
-            //if(data.fields.Phone.value){
+            if(data.fields.Phone.value == null){
+                this.phone = '';
+            }else{
                 this.phone = data.fields.Phone.value;
-            //}else{
-            //    this.phone = null;
-            //}
+            }
         }
     }
 }
