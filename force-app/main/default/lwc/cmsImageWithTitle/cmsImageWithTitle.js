@@ -45,17 +45,6 @@ export default class CmsImageWithTitle extends NavigationMixin(
     wiredContent({ data, error }) {
         if (data) {
             this._cmsData = data;
-/*            if(!this._cmsData.selectedImageAltText){
-                this.altText = this._cmsData.title.value;
-            }else if(this._cmsData.selectedImageAltText){
-                this.altText = this._cmsData.selectedImageAltText.value;
-            }
-            if(!this._cmsData.altText.value){
-                this.altText = this._cmsData.title.value;
-            }else if(this._cmsData.altText.value){
-                this.altText = this._cmsData.altText.value;
-            }
-*/
             if (this._selected && this._cmsData.selectedImageAltText) {
                 this.altText = this._cmsData.selectedImageAltText.value;
                 this.url =

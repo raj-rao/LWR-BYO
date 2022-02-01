@@ -54,15 +54,7 @@ export default class SearchBar extends NavigationMixin(LightningElement) {
             searchBar.classList.replace("bx-x" ,"bx-search");
         }
     }
-/*    
-    connectedCallback() {
-        document.addEventListener('click', this._handler = this.close.bind(this));
-    }
-    
-    disconnectedCallback() {
-        document.removeEventListener('click', this._handler);
-    }
-*/    
+
     /**
      * stop propagation and ignore the click event (will not execute the close() method)as we are inside the profile menu 
     */

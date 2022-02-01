@@ -1,6 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
-
 import basePath from '@salesforce/community/basePath';
 
 export default class NavigationMenuItem extends NavigationMixin(LightningElement) {

@@ -1,21 +1,15 @@
-/*.input-box{
-    position: absolute;
-    right: calc(100% - 40px);
-    top: 80px;
-    height: 60px;
-    width: 300px;
-    background: #3E8DA8;
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-  }*/
+/*
+css mapped to theme panel in Experience Builder via --dxp Styling Hooks listed below
+ - Brand Color: Theme | Colors | Basic | Brand Color: var(--dxp-g-brand)  
+ - Link Color: Theme | Colors | Advanced | Links | Link Color: var(--dxp-s-link-text-color)
+ */
 
   .search-box{
     position: relative;
-     height: 40px;
+    height: 40px;
     width: 40px;
   }
+  
   .search-box i{
     position: absolute;
     height: 100%;
@@ -23,19 +17,18 @@
     line-height: 40px;
     text-align: center;
     font-size: 22px;
-    /*color: #fff;*/
-    color: var(--dxp-g-root-contrast);
+    color: var(--dxp-s-link-text-color);
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
   }
+  
   .search-box .input-box{
     position: absolute;
     right: calc(100% - 40px);
     top: 80px;
     height: 60px;
     width: 300px;
-    /*background: #3E8DA8;*/
     background: var(--dxp-g-brand);
     color: #000000;
     border-radius: 6px;
@@ -43,11 +36,11 @@
     pointer-events: none;
     transition: all 0.4s ease;
   }
+  
   .search-box.showInput .input-box{
     top: 65px;
     opacity: 1;
     pointer-events: auto;
-    /*background: #3E8DA8;*/
     background: var(--dxp-g-brand);
   }
   
@@ -56,19 +49,17 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    /*color: #000000;*/
-    /*background: #3E8DA8;*/
     background: var(--dxp-g-brand);
     right: 10px;
     top: -6px;
     transform: rotate(45deg);
   }
+  
   .search-box .input-box input{
     position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 4px;
-    /*color: #000000;*/
     transform: translate(-50%, -50%);
     height: 35px;
     width: 280px;
@@ -77,43 +68,3 @@
     font-size: 16px;
     border: none;
   }
-  
-  /*
-  .showinput-box{
-    position: absolute;
-    right: calc(100% - 40px);
-    top: 65px;
-    height: 60px;
-    width: 300px;
-    background: #3E8DA8;
-    border-radius: 6px;
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.4s ease;
-  }
-
-  .showinput-box::before{
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #3E8DA8;
-    right: 10px;
-    top: -6px;
-    transform: rotate(45deg);
-  }
-
-  .showinput-box input{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-    height: 35px;
-    width: 280px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 16px;
-    border: none;
-  }
-  */

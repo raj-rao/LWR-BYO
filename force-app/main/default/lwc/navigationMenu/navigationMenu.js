@@ -3,12 +3,11 @@ import { CurrentPageReference } from 'lightning/navigation';
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader'; //added by Raj Rao on 7/28/2021
 import boxIconStyles from '@salesforce/resourceUrl/boxIconsCSS';
 import azInsuranceLogo from '@salesforce/resourceUrl/azinsurancelogo';
-
 import { NavigationMixin } from 'lightning/navigation';
 import basePath from '@salesforce/community/basePath';
-
 import getNavigationMenuItems from '@salesforce/apex/NavigationMenuItemsController.getNavigationMenuItems';
 import isGuest from '@salesforce/user/isGuest';
+
 
 /**
  * This is a custom LWC navigation menu component.
@@ -101,7 +100,7 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
             }).filter(item => {
                 // Only show "Public" items if guest user
                 return item.accessRestriction === "None"
-                        || (item.accessRestriction === "LoginRequired" && !isGuestUser);
+                        || (item.accessRestriction === "LoginRequired" && !this.isGuestUser);
             });
             
             // assign submenus as children of menu item
@@ -341,7 +340,6 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
      */
     handleSubMenuEvent(event){
         let hasChildren = event.detail.hasChildren;
-        console.log('HAS CHILDREN:'+hasChildren);
         if(hasChildren){
             let menuIndx = event.detail.menuIndx;
             let parentId = event.detail.parentId;

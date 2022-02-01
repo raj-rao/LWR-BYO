@@ -1,10 +1,15 @@
+/*
+css mapped to theme panel in Experience Builder via --dxp Styling Hooks listed below
+ - Background Color: Theme | Colors | Basic | Background Color: var(--dxp-g-root)  
+ - Text Color: Theme | Colors | Basic | Text Color: var(--dxp-g-root-contrast)  
+ - Link Color: Theme | Colors | Advanced | Links | Link Color: var(--dxp-s-link-text-color)
+ */
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /*font-family: 'Poppins', sans-serif;*/
 }
-
 
 body{
   min-height: 100vh;
@@ -13,17 +18,14 @@ body{
 .home{
   padding-right: 5px;
   font-size: var(--dxp-s-html-font-size);
-  /*font-family: var(--dxp-s-body-font-family);*/
-  /*color: var(--dxp-g-root-contrast);*/
+  color: var(--dxp-s-link-text-color);
 }
 
 .home-anchor{
   font-size: var(--dxp-s-html-font-size);
   text-decoration: none;
-  color: initial !important;
+  color: var(--dxp-s-link-text-color) !important;
 }
-
- 
 
 nav{
   position: fixed;
@@ -32,11 +34,11 @@ nav{
   width: 100%;
   height: 100%;
   height: 70px;
-  /*background: #3E8DA8;*/
   background: var(--dxp-g-root);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
+
 nav .navbar{
   height: 100%;
   max-width: 1250px;
@@ -45,23 +47,25 @@ nav .navbar{
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  /* background: red; */
   padding: 0 50px;
 }
+
 .navbar .logo a{
   font-size: 30px;
-  /*color: #fff;*/
   color: var(--dxp-g-root-contrast);
   text-decoration: none;
   font-weight: 600;
 }
+
 nav .navbar .nav-links{
   line-height: 70px;
   height: 100%;
 }
+
 nav .navbar .links{
   display: flex;
 }
+
 nav .navbar .links li{
   position: relative;
   display: flex;
@@ -70,36 +74,32 @@ nav .navbar .links li{
   list-style: none;
   padding: 0 14px;
 }
+
 nav .navbar .links li a{
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
-  /*color: #fff;*/
   color: var(--dxp-g-root-contrast);
-  /*font-size: 15px;*/
   font-size: var(--dxp-s-html-font-size);
   font-weight: 500;
 }
 
 nav .navbar .links li .arrow{
-  /* background: red; */
-  /*font-size: 15px;*/
   font-size: var(--dxp-s-html-font-size);
   height: 100%;
   width: 22px;
   line-height: 70px;
   text-align: center;
   display: inline-block;
-  /*color: #fff;*/
-  color: var(--dxp-g-root-contrast);
+  color: var(--dxp-s-link-text-color);
   transition: all 0.3s ease;
 }
+
 nav .navbar .links li .sub-menu{
   position: absolute;
   top: 70px;
   left: 0;
   line-height: 40px;
-  /*background: #3E8DA8;*/
   background: var(--dxp-g-root);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
@@ -119,32 +119,11 @@ nav .navbar .links li .sub-menu{
   padding: 0 22px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
 .navbar .links li .sub-menu a{
-  /*color: #fff;*/
   color: var(--dxp-g-root-contrast);
-  /*font-size: 15px;*/
   font-size: var(--dxp-s-html-font-size);
   font-weight: 500;
-}
-
-.navbar .search-box{
-  position: relative;
-   height: 40px;
-  width: 40px;
-}
-.navbar .search-box i{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  line-height: 40px;
-  text-align: center;
-  /*font-size: 22px;*/
-  font-size: var(--dxp-s-html-font-size);
-  /*color: #fff;*/
-  color: var(--dxp-g-root-contrast);
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .navbar .nav-links .sidebar-logo{
@@ -162,21 +141,19 @@ nav .navbar .links li .sub-menu{
   nav .navbar .logo a{
     font-size: 27px;
   }
+  
   nav .navbar .links li{
     padding: 0 10px;
     white-space: nowrap;
   }
+  
   nav .navbar .links li a{
-    /*font-size: 15px;*/
     font-size: var(--dxp-s-html-font-size);
   }
 }
+
 @media screen and (max-width:800px){
-    /*   nav{
-position: relative; 
-  }*/
-  
-  .navbar .bx-menu{
+ .navbar .bx-menu{
     display: block;
   }
   
@@ -187,7 +164,6 @@ position: relative;
     display: block;
     max-width: 270px;
     width: 100%;
-    /*background: #3E8DA8;*/
     background: var(--dxp-g-root);/*brand*/
     line-height: 40px;
     padding: 20px;
@@ -204,15 +180,12 @@ position: relative;
   
   .sidebar-logo .logo-name{
     font-size: 25px;
-    /*color: #fff;*/
     color: var(--dxp-g-root-contrast);
   }
   
   .sidebar-logo  i,
     .navbar .bx-menu{
-    /*font-size: 25px;*/
     font-size: var(--dxp-s-text-heading-medium-font-size);
-    /*color: #fff;*/
     color: var(--dxp-g-root-contrast);
     }
   
