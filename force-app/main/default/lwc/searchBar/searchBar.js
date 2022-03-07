@@ -35,8 +35,8 @@ export default class SearchBar extends NavigationMixin(LightningElement) {
         let searchBox = this.template.querySelector(".search-box");
         let searchBar = this.template.querySelector(".search-box .bx-search");
         //display search box
-        searchBox.classList.toggle("showInput");
-        if(searchBox.classList.contains("showInput")){
+        searchBox.classList.toggle("showSearchBox");//showInput
+        if(searchBox.classList.contains("showSearchBox")){//showInput
             searchBar.classList.replace("bx-search" ,"bx-x");
         }else {
             searchBar = this.template.querySelector(".search-box .bx-x");
@@ -47,9 +47,9 @@ export default class SearchBar extends NavigationMixin(LightningElement) {
 
     @api hideSearchBox(){
         let searchBox = this.template.querySelector(".search-box");
-        if(searchBox.classList.contains("showInput")){
+        if(searchBox.classList.contains("showSearchBox")){//showInput
             let searchBar = this.template.querySelector(".search-box .bx-x");
-            searchBox.classList.toggle("showInput");
+            searchBox.classList.toggle("showSearchBox");//showInput
             this.template.querySelector(".input-box input").value = "";
             searchBar.classList.replace("bx-x" ,"bx-search");
         }
@@ -72,7 +72,7 @@ export default class SearchBar extends NavigationMixin(LightningElement) {
     }
 
     /**
-     * close the Searh Box if a click is detected outside of the boundries of this component 
+     * close the Search Box if a click is detected outside of the boundries of this component 
     */
     /*
     close() { 

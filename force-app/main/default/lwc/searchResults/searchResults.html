@@ -1,11 +1,12 @@
 <template>
-    <div class="dxp-text-heading-medium">Search Results for {objectApiName}s</div>
+    <div class="dxp-text-heading-medium">Search Results for {objectApiName}s
+        <span class="slds-text-body_small slds-text-color_weak">: {numResultsMessage}</span>
+    </div>
         <!--c-object-header object-api-name={objectApiName} plural="true"></c-object-header-->
     <template if:true={isLoaded}>
         <template if:true={hasError}>
-            <h2 class="slds-text-color_error slds-text-heading_large slds-text-align_center">{errorMessage}</h2>
+            <h2 class="slds-text-color_error slds-text-body_small">{errorMessage}</h2>
         </template>
-
         <template for:each={results} for:item='result'>
             <div class="slds-p-horizontal_large slds-p-vertical_small" key={result.Id}>
                 <c-record-link object-api-name={objectApiName}
@@ -14,14 +15,8 @@
                 </c-record-link>
             </div>
         </template>
-
-        <div class="slds-p-around_large">
-            <span class="num-results slds-text-body_small slds-text-color_weak">{numResultsMessage}</span>
-        </div>
     </template>
-
     <template if:false={isLoaded}>
         <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
     </template>
-
 </template>

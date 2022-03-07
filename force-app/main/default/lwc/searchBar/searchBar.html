@@ -1,8 +1,12 @@
 <template>
     <div class="search-box">
         <i onclick={handleClick} data-id='search-box' class='bx bx-search'></i>
-        <div class="input-box" onkeyup={handleKeyUp}>
-            <input type="text" onclick={insideClick} placeholder="Search...">
+        <div class="slds-popover slds-nubbin_top-right">
+            <div class="slds-popover__body">
+                <div class="input-box" onkeyup={handleKeyUp}>
+                    <input type="text" class="slds-input" onclick={insideClick} placeholder="Search...">
+                </div>
+            </div>
         </div>
     </div>
 </template>

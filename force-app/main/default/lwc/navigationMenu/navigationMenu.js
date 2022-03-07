@@ -59,20 +59,19 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
     /**
      * is this a Guest User
      */
-     isGuestUser = isGuest;
+    isGuestUser = isGuest;
     
     /**
      * the PageReference object used by lightning/navigation
      */
-     pageReference;
+    pageReference;
 
      /**
      * the site logo from resourceURL
      */
-      logo = azInsuranceLogo;
+    logo = azInsuranceLogo;
 
-
-    /**
+     /**
      * Using a custom Apex controller, query for the NavigationMenuItems using the
      * menu name and published state.
      * 

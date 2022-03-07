@@ -31,12 +31,12 @@
 }
 
 .user-profile li:not(:last-child){
-    border-bottom: 1px solid #ececec;
+    border-bottom: 1px solid var(--dxp-g-neutral);/*#ececec;*/
     /*width:100%;*/
 }
 
 .user-profile li:hover{
-    background: lightgray;
+    background: var(--dxp-g-root-1);/*lightgray;*/
 }
 
 .profile-menu-item, a{

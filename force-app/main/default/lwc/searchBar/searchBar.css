@@ -4,67 +4,37 @@ css mapped to theme panel in Experience Builder via --dxp Styling Hooks listed b
  - Link Color: Theme | Colors | Advanced | Links | Link Color: var(--dxp-s-link-text-color)
  */
 
-  .search-box{
-    position: relative;
-    height: 40px;
-    width: 40px;
-  }
-  
-  .search-box i{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    line-height: 40px;
-    text-align: center;
-    font-size: 22px;
-    color: var(--dxp-s-link-text-color);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .search-box .input-box{
-    position: absolute;
-    right: calc(100% - 40px);
-    top: 80px;
-    height: 60px;
-    width: 300px;
-    background: var(--dxp-g-brand);
-    color: #000000;
-    border-radius: 6px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.4s ease;
-  }
-  
-  .search-box.showInput .input-box{
-    top: 65px;
-    opacity: 1;
-    pointer-events: auto;
-    background: var(--dxp-g-brand);
-  }
-  
-  .search-box .input-box::before{
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: var(--dxp-g-brand);
-    right: 10px;
-    top: -6px;
-    transform: rotate(45deg);
-  }
-  
-  .search-box .input-box input{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 4px;
-    transform: translate(-50%, -50%);
-    height: 35px;
-    width: 280px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 16px;
-    border: none;
-  }
+ .search-box .slds-nubbin_top-right{
+  position: absolute;
+  right: calc(100% - 40px);
+  top: 80px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.search-box.showSearchBox .slds-nubbin_top-right{
+  top: 65px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.search-box{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.search-box i{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: var(--dxp-s-link-text-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

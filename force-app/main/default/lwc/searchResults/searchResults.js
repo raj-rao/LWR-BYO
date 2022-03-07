@@ -18,7 +18,17 @@ export default class SearchBar extends LightningElement {
             this.isLoaded = true;
         } else if (error) {
             this.hasError = true;
-            this.error = error;
+            this.error = error.body.message;
+            //parse error message
+            // UI API read operations return an array of objects
+            if(Array.isArray(error.body)) {
+                this.error = error.body.map(e => e.message).join(', ');
+            } 
+            // UI API write operations, Apex read and write operations 
+            // and network errors return a single object
+            else if(typeof error.body.message === 'string') {
+                this.error = error.body.message;
+            }
             this.isLoaded = true;
         }
     }
@@ -28,7 +38,6 @@ export default class SearchBar extends LightningElement {
     }
 
     get errorMessage() {
-        // should actually parse the 'error' object for message
-        return "An Error has occured.";
+        return this.error;
     }
 }
