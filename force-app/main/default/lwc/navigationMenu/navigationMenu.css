@@ -114,12 +114,11 @@ nav .navbar .links li .sub-menu{
 .transformArrow{
   transform: rotate(180deg) !important;
 }
-/*
+
 .navbar .links li .sub-menu li{
   padding: 0 22px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-*/
+
 .navbar .links li .sub-menu li:not(:last-child){
   padding: 0 22px;
   border-bottom: 1px solid var(--dxp-g-neutral);/*#ececec;*/
